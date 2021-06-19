@@ -99,14 +99,16 @@
     scene.add( plane3 );
         tick();
    
-    
+        //tekusutya
+      var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("img/treeyuka.jpg");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
     
     //heimenn2zennmenn
     
      var geometry = new THREE.PlaneGeometry( 300, 200, 1);
-    var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
-    
-    var plane2 = new THREE.Mesh( geometry, material );
+ var plane2 = new THREE.Mesh( geometry, mat);
     plane2.position.z = -100;
     plane2.position.y = 40;
    
