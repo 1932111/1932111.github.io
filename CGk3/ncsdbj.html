@@ -40,6 +40,13 @@
         // シーンに追加
         scene.add(directionalLight2);
         
+        //へいめん 
+        var geometry = new THREE.PlaneGeometry( 160, 300, 300);
+    var material = new THREE.MeshPhongMaterial( {color: 0x00ff00, side: THREE.DoubleSide} );
+    var plane1 = new THREE.Mesh( geometry, material );
+        scene.add( plane1 );
+        tick();
+        
        //球
 var sphereGeometry = new THREE.SphereGeometry( 150, 300, 300 ); 
 var sphereMaterial = new THREE. MeshPhongMaterial( {color:0x00ff00,wireframe: true} );
