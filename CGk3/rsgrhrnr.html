@@ -61,7 +61,7 @@
     plane1.position.z = -100;
     plane1.position.y = 0;
     
-    plane1.rotation.x = 200;
+    plane1.rotation.x = 253;
    
     scene.add( plane1 );
     
@@ -71,14 +71,23 @@
     scene.add(directionalLight);
     
   tick();
-
- 
+        
+        //heimendai
+        var geometry = new THREE.PlaneGeometry( 1000, 1000, 1);
+    var material = new THREE.MeshPhongMaterial( {color: 0x0f0f0f, side: THREE.DoubleSide} );
     
+    var plane3 = new THREE.Mesh( geometry, material );
+    plane3.position.z = -110;
+    plane3.position.y = 20;
+   
+    scene.add( plane3 );
+        tick();
+   
     
     
     //heimenn2
     
-     var geometry = new THREE.PlaneGeometry( 125, 85, 1);
+     var geometry = new THREE.PlaneGeometry( 200, 100, 1);
     var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
     
     var plane2 = new THREE.Mesh( geometry, material );
