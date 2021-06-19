@@ -39,6 +39,24 @@
         directionalLight2.position.set(-100, 100, 100);
         // シーンに追加
         scene.add(directionalLight2);
+        
+        //へいめｎ下
+   
+     var geometry = new THREE.PlaneGeometry( 160, 80, 1);
+    var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
+    
+    var plane1 = new THREE.Mesh( geometry, material );
+    plane1.position.z = -100;
+    plane1.position.y = -26;
+    
+    plane1.rotation.x = 253;
+   
+    scene.add( plane1 );
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(1, 1, 1);
+    // シーンに追加
+    scene.add(directionalLight);
 
         // 箱を作成(原点に作成)
         var geometry = new THREE.BoxGeometry(300, 300, 300);
