@@ -40,20 +40,11 @@
         // シーンに追加
         scene.add(directionalLight2);
         
-        //へいめｎ下
-   
-     var geometry = new THREE.PlaneGeometry( 300, 300, 300);
-    var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
-    
-    var plane1 = new THREE.Mesh( geometry, material );
-
-   
-    scene.add( plane1 );
-    
-    var directionalLight = new THREE.DirectionalLight(0xffffff);
-    directionalLight.position.set(1, 1, 1);
-    // シーンに追加
-    scene.add(directionalLight);
+       //球
+var sphereGeometry = new THREE.SphereGeometry( 0.5, 150, 250 ); 
+var sphereMaterial = new THREE. MeshPhongMaterial( {color:0x00ff00,wireframe: true} );
+var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
+        scene.add(sphere1);
 
         // 箱を作成(原点に作成)
         var geometry = new THREE.BoxGeometry(300, 300, 300);
