@@ -122,7 +122,10 @@ var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
     
     scene.add(sphere1);
         
-      sphere1.position.z += 0.77;
+        
+         var update = function() {
+      requestAnimationFrame(update);
+      sphere1.position.z -= 0.77;
    
 // 毎フレーム時に実行されるループイベントです
         function tick() {
