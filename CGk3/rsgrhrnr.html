@@ -72,8 +72,24 @@
     
   tick();
         
+         //へいめｎ下22
+   
+     var geometry = new THREE.PlaneGeometry( 2500, 2000, 1);
+    var material = new THREE.MeshPhongMaterial( {color: 0xf000fff, side: THREE.DoubleSide} );
+    
+    var plane4 = new THREE.Mesh( geometry, material );
+    plane4.position.z = -100;
+    plane4.position.y = -10;
+    
+    plane4.rotation.x = 253;
+   
+    scene.add( plane4 );
+   
+    
+  tick();
+        
         //heimendai
-        var geometry = new THREE.PlaneGeometry( 1000, 1000, 1);
+        var geometry = new THREE.PlaneGeometry( 2000, 1000, 1);
     var material = new THREE.MeshPhongMaterial( {color: 0x0f0f0f, side: THREE.DoubleSide} );
     
     var plane3 = new THREE.Mesh( geometry, material );
