@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+
+  <!-- three.jsを読み込む(ローカル) -->
+  <!-- <script src="./three.js"></script> -->
+  <!-- three.jsを読み込む(CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+<script src="OrbitControls.js"></script>
+   <script>
+       // ページの読み込みを待つ
+      window.addEventListener('load', init);
+
+      function init() {
+        // サイズを指定
+        const width = 960;
+        const height = 540;
+
+        // レンダラーを作成
+        const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector('#myCanvas')
+        });
+        renderer.setSize(width, height);
+
+        // シーンを作成
+        const scene = new THREE.Scene();
+
+        // カメラを作成
+        const camera = new THREE.PerspectiveCamera(45, width / height);
+        // カメラの初期座標を設定
+        camera.position.set(0, 0, 1000);
+
+        // カメラコントローラーを作成
+        const controls = new THREE.OrbitControls(camera,document.body);
+  
+        // 平行光源1
+        var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+        directionalLight1.position.set(100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight1);
+        // 平行光源2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+        directionalLight2.position.set(-100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight2);
+        
+        // 平行光源3
+        var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        directionalLight3.position.set(200, 100, 50);
+        // シーンに追加
+        scene.add(directionalLight3)
+        
+        //へいめｎ下
+   
+     var geometry = new THREE.PlaneGeometry( 160, 80, 1);
+    var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
+    
+    var plane1 = new THREE.Mesh( geometry, material );
+    plane1.position.z = -100;
+    plane1.position.y = -26;
+    
+    plane1.rotation.x = 253;
+   
+    scene.add( plane1 );
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(1, 1, 1);
+    // シーンに追加
+    scene.add(directionalLight);
+    
+  tick();
+
+ 
+    
+    
+    
+    //heimenn2
+    
+     var geometry = new THREE.PlaneGeometry( 125, 85, 1);
+    var material = new THREE.MeshPhongMaterial( {color: 0xf0f, side: THREE.DoubleSide} );
+    
+    var plane2 = new THREE.Mesh( geometry, material );
+    plane2.position.z = -110;
+    plane2.position.y = 26;
+   
+    scene.add( plane2 );
+        tick();
+    
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(1, 1, 1);
+    // シーンに追加
+    scene.add(directionalLight);
+   
+// 毎フレーム時に実行されるループイベントです
+        function tick() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
+</html>
+    
+  
