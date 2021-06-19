@@ -48,7 +48,7 @@
         
         // 平行光源3
         var directionalLight3 = new THREE.DirectionalLight(0xffffff);
-        directionalLight3.position.set(200, 100, 50);
+        directionalLight3.position.set(200, 200, 50);
         // シーンに追加
         scene.add(directionalLight3)
         
@@ -112,11 +112,18 @@
    
     scene.add( plane2 );
         tick();
+        
+        
+        //球
+var sphereGeometry = new THREE.SphereGeometry( 200, 150, 250 ); 
+var sphereMaterial = new THREE. MeshPhongMaterial( {color:0x00ff00,wireframe: true} );
+var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
     
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 1, 1);
     // シーンに追加
     scene.add(directionalLight);
+      
    
 // 毎フレーム時に実行されるループイベントです
         function tick() {
