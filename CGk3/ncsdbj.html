@@ -45,10 +45,13 @@
     var material = new THREE.MeshPhongMaterial( {color: 0x00ff00, side: THREE.DoubleSide} );
     var plane1 = new THREE.Mesh( geometry, material );
         scene.add( plane1 );
+        plane1.position.z = -100;
+        plane1.position.y = -12;
+        
         tick();
         
        //球
-var sphereGeometry = new THREE.SphereGeometry( 150, 300, 300 ); 
+var sphereGeometry = new THREE.SphereGeometry( 100, 300, 300 ); 
 var sphereMaterial = new THREE. MeshPhongMaterial( {color:0x00ff00,wireframe: true} );
 var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
         scene.add(sphere1);
