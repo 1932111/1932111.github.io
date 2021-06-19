@@ -36,9 +36,14 @@
         scene.add(directionalLight1);
         // 平行光源2
         var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-        directionalLight2.position.set(-100, 100, 100);
+        directionalLight2.position.set(-100, 100, 100):
         // シーンに追加
         scene.add(directionalLight2);
+         // 平行光源3
+        var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+        directionalLight3.position.set(50, 50, 200):
+        // シーンに追加
+        scene.add(directionalLight3);
         
         //へいめん 
         var geometry = new THREE.PlaneGeometry( 300, 300, 300);
